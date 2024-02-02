@@ -15,5 +15,5 @@ class Solution(object):
                 else:
                     stack.append(elem)
 
-        return len(stack)==0
+        return True if len(stack)==0 else False
         
