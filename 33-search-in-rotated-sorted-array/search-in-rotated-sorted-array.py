@@ -15,6 +15,8 @@ def pivot(nums):
     return pivot
 class Solution(object):
     def search(self, nums, target):
+        if len(nums)==1:
+            return 0 if nums[0]==target else -1
         p=pivot(nums)
         ans=-1
         if p > 0 and (nums[0] <= target <= nums[p-1]):
