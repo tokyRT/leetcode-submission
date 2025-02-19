@@ -9,16 +9,15 @@ class Solution(object):
         i=len(digits)-1
         while i >= 0:
             tmp = digits[i] + 1 if retenu == 1 else digits[i]
-            res.append(tmp % 10)
+            res.insert(0, tmp % 10)
             if tmp == 10: retenu = 1
             else: retenu = 0
 
             i-=1
 
         if retenu == 1:
-            res.append(1)
+            res.insert(0, 1)
             retenu = 0
-        res.reverse()
 
         return res
         
